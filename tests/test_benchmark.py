@@ -27,12 +27,15 @@ class EngineTest(unittest.TestCase):
     def test_art6_3_exception_is_cancelled_by_profiling(self):
         excepted = facts(annex_iii_area="essential_services", art6_3_exception=True)
         self.assertEqual(engine.tier(excepted), "minimal")
-        self.assertEqual(engine.clauses(excepted), ["Art.49(2)", "Art.5(1)", "Art.6(3)", "Art.6(4)"])
+        self.assertEqual(engine.clauses(excepted), ["Art.4(1)", "Art.49(2)", "Art.5(1)", "Art.6(3)", "Art.6(4)"])
         self.assertEqual(engine.tier({**excepted, "profiling": True}), "high_risk_6_2")
 
     def test_conditional_clauses_and_routes(self):
         mdr = engine.clauses(facts(mdr_class="IIb", special_category_data=True))
         self.assertTrue({"Art.4a(1)", "Art.43(3)", "Art.11(2)", "Art.6(1)"} <= set(mdr))
+        # Art. 6(1a)-(1c) (Regulation (EU) 2026/1744) qualify Art. 6(1) and go with it
+        self.assertTrue({"Art.6(1a)", "Art.6(1b)", "Art.6(1c)"} <= set(mdr))
+        self.assertFalse({"Art.6(1a)", "Art.6(1b)", "Art.6(1c)"} & set(engine.clauses(facts(annex_iii_area="employment"))))
         self.assertFalse({"Art.49(1)", "Art.43(2)", "Art.6(2)"} & set(mdr))
         self.assertNotIn("Art.4a(1)", engine.clauses(facts(mdr_class="IIb")))
         # Art.4a(1) (formerly Art.10(5)) covers high-risk systems only
@@ -51,10 +54,10 @@ class EngineTest(unittest.TestCase):
 
     def test_out_of_scope_prohibited_and_minimal(self):
         self.assertEqual(engine.clauses({**BASE}), [])
-        self.assertEqual(engine.clauses(facts(prohibited_practice=True, mdr_class="III")), ["Art.5(1)"])
-        self.assertEqual(engine.clauses(facts()), ["Art.5(1)"])
+        self.assertEqual(engine.clauses(facts(prohibited_practice=True, mdr_class="III")), ["Art.4(1)", "Art.5(1)"])
+        self.assertEqual(engine.clauses(facts()), ["Art.4(1)", "Art.5(1)"])
         self.assertEqual(engine.clauses(facts(interacts_with_persons=True, synthetic_content=True)),
-                         ["Art.5(1)", "Art.50(1)", "Art.50(2)"])
+                         ["Art.4(1)", "Art.5(1)", "Art.50(1)", "Art.50(2)"])
 
     def test_every_clause_is_a_pack_leaf_and_catalogued(self):
         catalogue = {json.loads(l)["id"] for l in (ROOT / "data/clauses.jsonl").read_text().splitlines()}
@@ -154,7 +157,7 @@ class DraftTest(unittest.TestCase):
         self.assertEqual(draft.draft("x", chat=lambda t: "```json\n" + json.dumps(ok) + "\n```"), (ok["statements"], True))
 
     def test_the_prompt_lists_every_scorable_clause(self):
-        self.assertEqual(len(draft.KNOWN), 46)
+        self.assertEqual(len(draft.KNOWN), 50)
         self.assertTrue(all(f"{c}:" in draft.PROMPT for c in draft.KNOWN))
 
 

@@ -19,9 +19,10 @@ description ──► reader (small LM) ──► facts (JSON) ──► rule en
 - **Rule engine** (`cdb/engine.py`): deterministic, no model. Combines the facts into the AI Act
   category (Art. 5 screen, Art. 6(1) via the MDR class, Art. 6(2)/(3) via Annex III) and answers the
   scoping questions of the **EU AI Act framework pack** (`cdb/eu_ai_act_pack.json`, Complear's pack
-  format). The pack's rules decide which of its 46 clauses apply (Art. 4a, 5, 6, 9–20, 43, 47–50, 72, 73).
-  Version 2026.1 follows the AI Act as amended by Regulation (EU) 2026/1744 (see `data/REVIEW.md`);
-  Complear's own pack gets the same changes, after which the two share one rule source again.
+  format). The pack's rules decide which of its 50 clauses apply (Art. 4, 4a, 5, 6, 9–20, 43, 47–50, 72, 73).
+  Version 2026.1 follows the AI Act as amended by Regulation (EU) 2026/1744 (see `data/REVIEW.md`),
+  including the rewritten Art. 4 (AI literacy) and the new Art. 6(1a)–(1c); it is vendored from
+  Complear's pack, so the two share one rule source.
 - **Scorer** (`cdb/scorer.py`): clause coverage, clause precision, under-classification rate
   (predicted tier less severe than expected), plus tier and per-fact accuracy.
 - **Scorecard** (`schema/scorecard.schema.json`) and **Collector** (`collector/`): turn an
@@ -77,19 +78,19 @@ Credentials stay in the environment; nothing is stored in the repository.
 `data/cases.jsonl` — generated cases, reviewed and corrected by Miguel Amador on 17 November 2026
 (`data/REVIEW.md`); `cdb/eu_ai_act_pack.json` — the vendored pack
 (framework, clause tree with citations and titles, scoping questions with their options and rules;
-Complear's guidance text is not included, and nothing here reads it); `data/clauses.jsonl` — its 46 scorable clauses.
-Refresh both with `python -m cdb.vendor_pack <Complear pack path>`, then `make dataset` (only once
-Complear's pack carries the 2026.1 changes, or they are lost). Cases are generated, then the expected
+Complear's guidance text is not included, and nothing here reads it; Art. 50(3), a deployer duty, is
+left out); `data/clauses.jsonl` — its 50 scorable clauses.
+Refresh both with `python -m cdb.vendor_pack <Complear pack path>`, then `make dataset`. Cases are generated, then the expected
 tier and clauses are derived from each case's gold facts by the rule engine.
 
-## Baseline (17 November 2026, corrected cases, pack 2026.1)
+## Baseline (18 November 2026, reviewed cases, pack 2026.1 with Art. 4 and Art. 6(1a)–(1c))
 
 Ministral-3-3B-Instruct-2512 Q4_K_M, no fine-tuning, llama.cpp, temperature 0, 0 malformed outputs.
 
 | Split | n | Clause coverage | Clause precision | Under-classification | Tier accuracy |
 | --- | --- | --- | --- | --- | --- |
-| test | 88 | 0.907 | 0.847 | 0.034 | 0.852 |
-| fresh | 21 | 0.860 | 0.929 | 0.048 | 0.857 |
+| test | 88 | 0.914 | 0.864 | 0.034 | 0.852 |
+| fresh | 21 | 0.864 | 0.940 | 0.048 | 0.857 |
 
 Weakest facts on `test`: the Art. 6(3) exception (0.51), the Annex III area (0.66) and person
 interaction (0.83). Most tier errors are minimal cases read as limited (5 of 13). Across both splits the
@@ -100,20 +101,25 @@ example). A prompt rule for transcription (cases a-030, a-040) lowered coverage 
 under-classification on `test` (0.034 to 0.057), so it is not in the prompt. Before the
 review (13 November, uncorrected cases, pack 2024.1) the same model scored 0.920 / 0.911 / 0.025 /
 0.886 on `test`; the cases, the pack and the reader prompt all changed, so the two are not a like-for-like comparison.
+On 18 November the pack gained the rewritten Art. 4 (AI literacy, which applies to every AI system) and
+Art. 6(1a)–(1c) (which go with Art. 6(1)); 97 cases gained expected clauses and none lost any. The model's
+fact readings are identical to the 17 November run (0.907 / 0.847 on `test`, 0.860 / 0.929 on `fresh`);
+the higher clause scores come only from Art. 4(1), which the rules get right whenever the AI-system fact is right.
 
-### Track B baseline (17 November 2026)
+### Track B baseline (18 November 2026)
 
 Same model and settings, `max_tokens` 3000, 0 malformed outputs (`make draft`).
 
 | Split | n | Statements | Citation validity | Citation precision | Citation recall | Unsupported | Article precision | Article recall |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| test | 88 | 858 | 0.932 | 0.314 | 0.256 | 0.446 | 0.371 | 0.337 |
-| fresh | 21 | 181 | 0.989 | 0.420 | 0.295 | 0.392 | 0.475 | 0.348 |
+| test | 88 | 743 | 0.942 | 0.314 | 0.231 | 0.458 | 0.381 | 0.303 |
+| fresh | 21 | 187 | 0.973 | 0.347 | 0.227 | 0.391 | 0.443 | 0.304 |
 
 Asked to write the memo directly, the same model cites real clauses but mostly the wrong ones, and
-up to half of its quoted evidence is not in the description. Of the invalid citations, all but one
-join two or more clauses in one (e.g. `Art.13(2)&Art.15(3)`); the other is `Art.4(1)`, a real
-provision outside the pack. Track A reaches 0.91 coverage and 0.86 precision on the same cases
+up to half of its quoted evidence is not in the description. Of the 43 invalid citations, all but one
+join two or more clauses in one (e.g. `Art.13(2) + Art.15(3)`); the other is `Art.11(4)`, a real
+provision outside the pack. The model never cites Art. 4(1) on its own, so recall falls against the
+17 November run (0.256 to 0.231 on `test`), when Art. 4(1) was not in the pack. Track A reaches 0.91 coverage and 0.86 precision on the same cases
 because the rules, not the model, choose the clauses. Article precision and recall compare it with
 Track C: TAI Scan also lists obligations with a language model, but retrieves the legal text first.
 Engine self-check on gold facts: 1.0 / 1.0 / 0.0 on all 109 cases.
