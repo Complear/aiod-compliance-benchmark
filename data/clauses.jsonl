@@ -1,0 +1,46 @@
+{"id": "Art.4a(1)", "kind": "duty", "title": "Special categories of personal data for bias detection and correction", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.5(1)", "kind": "duty", "title": "Practices that may not be placed on the market or used", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(1)", "kind": "duty", "title": "High-risk through Union harmonisation legislation", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(2)", "kind": "duty", "title": "High-risk through Annex III", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(3)", "kind": "duty", "title": "Exception for Annex III systems without significant risk", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(4)", "kind": "duty", "title": "Documenting the exception", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.9(1)", "kind": "duty", "title": "Establish a risk management system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.9(2)", "kind": "duty", "title": "Continuous, iterative risk management", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.9(5)", "kind": "duty", "title": "Risk control measures and residual risk", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.9(6)", "kind": "duty", "title": "Testing to identify risk measures", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.10(2)", "kind": "duty", "title": "Data governance and management practices", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.10(3)", "kind": "duty", "title": "Relevant, representative and complete data sets", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.10(4)", "kind": "duty", "title": "Data sets reflect the setting of use", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.11(1)", "kind": "duty", "title": "Draw up and maintain technical documentation", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.11(2)", "kind": "duty", "title": "Single set of documentation with product legislation", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.12(1)", "kind": "duty", "title": "Automatic recording of events", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.12(2)", "kind": "duty", "title": "What the logs must make traceable", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.12(3)", "kind": "duty", "title": "Logging for remote biometric identification", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.13(1)", "kind": "duty", "title": "Operation transparent enough to interpret the output", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.13(2)", "kind": "duty", "title": "Accompany the system with instructions for use", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.13(3)", "kind": "duty", "title": "Content of the instructions for use", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.14(1)", "kind": "duty", "title": "Design for effective human oversight", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.14(2)", "kind": "duty", "title": "Purpose of oversight", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.14(3)", "kind": "duty", "title": "Oversight measures proportionate to the risks", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.14(4)", "kind": "duty", "title": "Enable the people who oversee the system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.14(5)", "kind": "duty", "title": "Two-person verification for remote biometric identification", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.15(1)", "kind": "duty", "title": "Appropriate accuracy, robustness and cybersecurity", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.15(3)", "kind": "duty", "title": "Declare accuracy in the instructions for use", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.15(4)", "kind": "duty", "title": "Resilience to errors, faults and feedback loops", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.15(5)", "kind": "duty", "title": "Resilience against attacks", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.16", "kind": "article", "title": "Obligations of providers of high-risk AI systems", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.17(1)", "kind": "duty", "title": "Put a quality management system in place", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.18(1)", "kind": "duty", "title": "Keep documentation for ten years", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.19(1)", "kind": "duty", "title": "Keep the logs for at least six months", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.20(1)", "kind": "duty", "title": "Correct, withdraw, disable or recall a non-conforming system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.43(1)", "kind": "duty", "title": "Route for Annex III point 1 biometric systems", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.43(2)", "kind": "duty", "title": "Internal control for Annex III points 2 to 8", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.43(3)", "kind": "duty", "title": "Systems under Annex I product legislation", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.47(1)", "kind": "duty", "title": "Draw up and keep the EU declaration of conformity", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.48", "kind": "article", "title": "CE marking", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.49(1)", "kind": "duty", "title": "Register a high-risk Annex III system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.49(2)", "kind": "duty", "title": "Register a system that relies on the Art.6(3) exception", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.50(1)", "kind": "duty", "title": "Tell people they are interacting with an AI system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.50(2)", "kind": "duty", "title": "Mark synthetic content as artificially generated", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.72(1)", "kind": "duty", "title": "Establish a post-market monitoring system", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.73(1)", "kind": "duty", "title": "Report serious incidents to the market surveillance authority", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}

@@ -1,0 +1,703 @@
+{
+ "framework": {
+  "key": "eu_ai_act",
+  "name": "EU AI Act (EU) 2024/1689, as amended by (EU) 2026/1744",
+  "version": "2026.1",
+  "publisher": "European Union",
+  "license": "public",
+  "scope": "project",
+  "default_availability": "selected"
+ },
+ "requirements": [
+  {
+   "citation": "Art.4a",
+   "kind": "article",
+   "title": "Processing of special categories of personal data for bias detection and correction",
+   "ordinal": 0,
+   "children": [
+    {
+     "citation": "Art.4a(1)",
+     "kind": "duty",
+     "title": "Special categories of personal data for bias detection and correction",
+     "ordinal": 1
+    }
+   ]
+  },
+  {
+   "citation": "Ch.II",
+   "kind": "chapter",
+   "title": "Chapter II — Prohibited AI practices",
+   "ordinal": 2,
+   "children": [
+    {
+     "citation": "Art.5",
+     "kind": "article",
+     "title": "Prohibited AI practices",
+     "ordinal": 5,
+     "children": [
+      {
+       "citation": "Art.5(1)",
+       "kind": "duty",
+       "title": "Practices that may not be placed on the market or used",
+       "ordinal": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "citation": "Ch.III",
+   "kind": "chapter",
+   "title": "Chapter III — High-risk AI systems",
+   "ordinal": 3,
+   "children": [
+    {
+     "citation": "Art.6",
+     "kind": "article",
+     "title": "Classification rules for high-risk AI systems",
+     "ordinal": 6,
+     "children": [
+      {
+       "citation": "Art.6(1)",
+       "kind": "duty",
+       "title": "High-risk through Union harmonisation legislation",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.6(2)",
+       "kind": "duty",
+       "title": "High-risk through Annex III",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.6(3)",
+       "kind": "duty",
+       "title": "Exception for Annex III systems without significant risk",
+       "ordinal": 3
+      },
+      {
+       "citation": "Art.6(4)",
+       "kind": "duty",
+       "title": "Documenting the exception",
+       "ordinal": 4
+      }
+     ]
+    },
+    {
+     "citation": "Art.9",
+     "kind": "article",
+     "title": "Risk management system",
+     "ordinal": 9,
+     "children": [
+      {
+       "citation": "Art.9(1)",
+       "kind": "duty",
+       "title": "Establish a risk management system",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.9(2)",
+       "kind": "duty",
+       "title": "Continuous, iterative risk management",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.9(5)",
+       "kind": "duty",
+       "title": "Risk control measures and residual risk",
+       "ordinal": 3
+      },
+      {
+       "citation": "Art.9(6)",
+       "kind": "duty",
+       "title": "Testing to identify risk measures",
+       "ordinal": 4
+      }
+     ]
+    },
+    {
+     "citation": "Art.10",
+     "kind": "article",
+     "title": "Data and data governance",
+     "ordinal": 10,
+     "children": [
+      {
+       "citation": "Art.10(2)",
+       "kind": "duty",
+       "title": "Data governance and management practices",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.10(3)",
+       "kind": "duty",
+       "title": "Relevant, representative and complete data sets",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.10(4)",
+       "kind": "duty",
+       "title": "Data sets reflect the setting of use",
+       "ordinal": 3
+      }
+     ]
+    },
+    {
+     "citation": "Art.11",
+     "kind": "article",
+     "title": "Technical documentation",
+     "ordinal": 11,
+     "children": [
+      {
+       "citation": "Art.11(1)",
+       "kind": "duty",
+       "title": "Draw up and maintain technical documentation",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.11(2)",
+       "kind": "duty",
+       "title": "Single set of documentation with product legislation",
+       "ordinal": 2
+      }
+     ]
+    },
+    {
+     "citation": "Art.12",
+     "kind": "article",
+     "title": "Record-keeping",
+     "ordinal": 12,
+     "children": [
+      {
+       "citation": "Art.12(1)",
+       "kind": "duty",
+       "title": "Automatic recording of events",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.12(2)",
+       "kind": "duty",
+       "title": "What the logs must make traceable",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.12(3)",
+       "kind": "duty",
+       "title": "Logging for remote biometric identification",
+       "ordinal": 3
+      }
+     ]
+    },
+    {
+     "citation": "Art.13",
+     "kind": "article",
+     "title": "Transparency and provision of information to deployers",
+     "ordinal": 13,
+     "children": [
+      {
+       "citation": "Art.13(1)",
+       "kind": "duty",
+       "title": "Operation transparent enough to interpret the output",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.13(2)",
+       "kind": "duty",
+       "title": "Accompany the system with instructions for use",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.13(3)",
+       "kind": "duty",
+       "title": "Content of the instructions for use",
+       "ordinal": 3
+      }
+     ]
+    },
+    {
+     "citation": "Art.14",
+     "kind": "article",
+     "title": "Human oversight",
+     "ordinal": 14,
+     "children": [
+      {
+       "citation": "Art.14(1)",
+       "kind": "duty",
+       "title": "Design for effective human oversight",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.14(2)",
+       "kind": "duty",
+       "title": "Purpose of oversight",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.14(3)",
+       "kind": "duty",
+       "title": "Oversight measures proportionate to the risks",
+       "ordinal": 3
+      },
+      {
+       "citation": "Art.14(4)",
+       "kind": "duty",
+       "title": "Enable the people who oversee the system",
+       "ordinal": 4
+      },
+      {
+       "citation": "Art.14(5)",
+       "kind": "duty",
+       "title": "Two-person verification for remote biometric identification",
+       "ordinal": 5
+      }
+     ]
+    },
+    {
+     "citation": "Art.15",
+     "kind": "article",
+     "title": "Accuracy, robustness and cybersecurity",
+     "ordinal": 15,
+     "children": [
+      {
+       "citation": "Art.15(1)",
+       "kind": "duty",
+       "title": "Appropriate accuracy, robustness and cybersecurity",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.15(3)",
+       "kind": "duty",
+       "title": "Declare accuracy in the instructions for use",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.15(4)",
+       "kind": "duty",
+       "title": "Resilience to errors, faults and feedback loops",
+       "ordinal": 3
+      },
+      {
+       "citation": "Art.15(5)",
+       "kind": "duty",
+       "title": "Resilience against attacks",
+       "ordinal": 4
+      }
+     ]
+    },
+    {
+     "citation": "Art.16",
+     "kind": "article",
+     "title": "Obligations of providers of high-risk AI systems",
+     "ordinal": 16
+    },
+    {
+     "citation": "Art.17",
+     "kind": "article",
+     "title": "Quality management system",
+     "ordinal": 17,
+     "children": [
+      {
+       "citation": "Art.17(1)",
+       "kind": "duty",
+       "title": "Put a quality management system in place",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.18",
+     "kind": "article",
+     "title": "Documentation keeping",
+     "ordinal": 18,
+     "children": [
+      {
+       "citation": "Art.18(1)",
+       "kind": "duty",
+       "title": "Keep documentation for ten years",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.19",
+     "kind": "article",
+     "title": "Automatically generated logs",
+     "ordinal": 19,
+     "children": [
+      {
+       "citation": "Art.19(1)",
+       "kind": "duty",
+       "title": "Keep the logs for at least six months",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.20",
+     "kind": "article",
+     "title": "Corrective actions and duty of information",
+     "ordinal": 20,
+     "children": [
+      {
+       "citation": "Art.20(1)",
+       "kind": "duty",
+       "title": "Correct, withdraw, disable or recall a non-conforming system",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.43",
+     "kind": "article",
+     "title": "Conformity assessment",
+     "ordinal": 43,
+     "children": [
+      {
+       "citation": "Art.43(1)",
+       "kind": "duty",
+       "title": "Route for Annex III point 1 biometric systems",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.43(2)",
+       "kind": "duty",
+       "title": "Internal control for Annex III points 2 to 8",
+       "ordinal": 2
+      },
+      {
+       "citation": "Art.43(3)",
+       "kind": "duty",
+       "title": "Systems under Annex I product legislation",
+       "ordinal": 3
+      }
+     ]
+    },
+    {
+     "citation": "Art.47",
+     "kind": "article",
+     "title": "EU declaration of conformity",
+     "ordinal": 47,
+     "children": [
+      {
+       "citation": "Art.47(1)",
+       "kind": "duty",
+       "title": "Draw up and keep the EU declaration of conformity",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.48",
+     "kind": "article",
+     "title": "CE marking",
+     "ordinal": 48
+    },
+    {
+     "citation": "Art.49",
+     "kind": "article",
+     "title": "Registration",
+     "ordinal": 49,
+     "children": [
+      {
+       "citation": "Art.49(1)",
+       "kind": "duty",
+       "title": "Register a high-risk Annex III system",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.49(2)",
+       "kind": "duty",
+       "title": "Register a system that relies on the Art.6(3) exception",
+       "ordinal": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "citation": "Ch.IV",
+   "kind": "chapter",
+   "title": "Chapter IV — Transparency obligations for certain AI systems",
+   "ordinal": 4,
+   "children": [
+    {
+     "citation": "Art.50",
+     "kind": "article",
+     "title": "Transparency obligations for providers and deployers of certain AI systems",
+     "ordinal": 50,
+     "children": [
+      {
+       "citation": "Art.50(1)",
+       "kind": "duty",
+       "title": "Tell people they are interacting with an AI system",
+       "ordinal": 1
+      },
+      {
+       "citation": "Art.50(2)",
+       "kind": "duty",
+       "title": "Mark synthetic content as artificially generated",
+       "ordinal": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "citation": "Ch.IX",
+   "kind": "chapter",
+   "title": "Chapter IX — Post-market monitoring, information sharing and market surveillance",
+   "ordinal": 9,
+   "children": [
+    {
+     "citation": "Art.72",
+     "kind": "article",
+     "title": "Post-market monitoring by providers",
+     "ordinal": 72,
+     "children": [
+      {
+       "citation": "Art.72(1)",
+       "kind": "duty",
+       "title": "Establish a post-market monitoring system",
+       "ordinal": 1
+      }
+     ]
+    },
+    {
+     "citation": "Art.73",
+     "kind": "article",
+     "title": "Reporting of serious incidents",
+     "ordinal": 73,
+     "children": [
+      {
+       "citation": "Art.73(1)",
+       "kind": "duty",
+       "title": "Report serious incidents to the market surveillance authority",
+       "ordinal": 1
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "key": "ai_act_category",
+   "question": "Which EU AI Act category does the system fall into?",
+   "options": [
+    "Not an AI system",
+    "Prohibited practice",
+    "High-risk: product under Union harmonisation legislation (e.g. MDR class IIa or higher)",
+    "High-risk: listed in Annex III",
+    "Listed in Annex III but not high-risk (Art. 6(3) exception)",
+    "Not high-risk"
+   ],
+   "rules": [
+    {
+     "when_answer": "Not an AI system",
+     "effect": "excluded",
+     "citations": [
+      "Ch.II",
+      "Ch.III",
+      "Ch.IV",
+      "Ch.IX",
+      "Art.4a"
+     ]
+    },
+    {
+     "when_answer": "Prohibited practice",
+     "effect": "excluded",
+     "citations": [
+      "Ch.III",
+      "Ch.IV",
+      "Ch.IX",
+      "Art.4a"
+     ]
+    },
+    {
+     "when_answer": "High-risk: product under Union harmonisation legislation (e.g. MDR class IIa or higher)",
+     "effect": "excluded",
+     "citations": [
+      "Art.6(2)",
+      "Art.6(3)",
+      "Art.6(4)",
+      "Art.43(1)",
+      "Art.43(2)",
+      "Art.49"
+     ]
+    },
+    {
+     "when_answer": "High-risk: listed in Annex III",
+     "effect": "excluded",
+     "citations": [
+      "Art.6(1)",
+      "Art.6(3)",
+      "Art.6(4)",
+      "Art.11(2)",
+      "Art.43(3)",
+      "Art.49(2)"
+     ]
+    },
+    {
+     "when_answer": "Listed in Annex III but not high-risk (Art. 6(3) exception)",
+     "effect": "excluded",
+     "citations": [
+      "Art.6(1)",
+      "Art.6(2)",
+      "Art.9",
+      "Art.10",
+      "Art.11",
+      "Art.12",
+      "Art.13",
+      "Art.14",
+      "Art.15",
+      "Art.16",
+      "Art.17",
+      "Art.18",
+      "Art.19",
+      "Art.20",
+      "Art.43",
+      "Art.47",
+      "Art.48",
+      "Art.49(1)",
+      "Ch.IX",
+      "Art.4a"
+     ]
+    },
+    {
+     "when_answer": "Not high-risk",
+     "effect": "excluded",
+     "citations": [
+      "Art.6",
+      "Art.49",
+      "Art.9",
+      "Art.10",
+      "Art.11",
+      "Art.12",
+      "Art.13",
+      "Art.14",
+      "Art.15",
+      "Art.16",
+      "Art.17",
+      "Art.18",
+      "Art.19",
+      "Art.20",
+      "Art.43",
+      "Art.47",
+      "Art.48",
+      "Ch.IX",
+      "Art.4a"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "annex_iii_biometrics",
+   "question": "Is it a biometric system under Annex III point 1 (remote identification, biometric categorisation or emotion recognition)?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "No",
+     "effect": "excluded",
+     "citations": [
+      "Art.43(1)"
+     ]
+    },
+    {
+     "when_answer": "Yes",
+     "effect": "excluded",
+     "citations": [
+      "Art.43(2)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "bias_special_category_data",
+   "question": "Do you process special categories of personal data to detect or correct bias in the system?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "No",
+     "effect": "excluded",
+     "citations": [
+      "Art.4a(1)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "remote_biometric_identification",
+   "question": "Does the system identify people at a distance by matching biometric data against a database?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "No",
+     "effect": "excluded",
+     "citations": [
+      "Art.12(3)",
+      "Art.14(5)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "interacts_with_persons",
+   "question": "Is the system intended to interact directly with natural persons (chat, voice)?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "No",
+     "effect": "excluded",
+     "citations": [
+      "Art.50(1)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "generates_synthetic_content",
+   "question": "Does the system generate synthetic audio, image, video or text?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "No",
+     "effect": "excluded",
+     "citations": [
+      "Art.50(2)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "annex_iii_critical_infrastructure",
+   "question": "Is the system a high-risk system under Annex III point 2 (critical infrastructure)?",
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "rules": [
+    {
+     "when_answer": "Yes",
+     "effect": "excluded",
+     "citations": [
+      "Art.49(1)"
+     ]
+    }
+   ]
+  }
+ ]
+}

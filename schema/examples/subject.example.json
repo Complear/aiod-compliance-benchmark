@@ -1,0 +1,6 @@
+{
+  "subject": {"system": "Obligation-mapping reader (baseline)", "model": "mistralai/Ministral-3-3B-Instruct-2512-GGUF", "model_revision": "Q4_K_M", "provider": "Complear"},
+  "benchmark": {"scope_refs": ["Art. 5", "Art. 6", "Art. 9-15", "Art. 43", "Art. 49", "Art. 50", "Annex III"]},
+  "run": {"date": "2026-11-13", "environment": "local", "reference": "results/evaluation.json"},
+  "limitations": "Synthetic cases; expected answers derived by a rule engine from reviewed facts; the regulatory review sample is pending."
+}
