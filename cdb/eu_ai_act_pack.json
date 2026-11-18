@@ -4,22 +4,52 @@
   "name": "EU AI Act (EU) 2024/1689, as amended by (EU) 2026/1744",
   "version": "2026.1",
   "publisher": "European Union",
+  "region": "European Union",
+  "regulation": "AI Act",
+  "classes": [],
   "license": "public",
   "scope": "project",
-  "default_availability": "selected"
+  "default_availability": "selected",
+  "supersedes": "2024.1"
  },
  "requirements": [
   {
-   "citation": "Art.4a",
-   "kind": "article",
-   "title": "Processing of special categories of personal data for bias detection and correction",
-   "ordinal": 0,
+   "citation": "Ch.I",
+   "kind": "chapter",
+   "ordinal": 1,
+   "title": "Chapter I — General provisions",
    "children": [
     {
-     "citation": "Art.4a(1)",
-     "kind": "duty",
-     "title": "Special categories of personal data for bias detection and correction",
-     "ordinal": 1
+     "key": "art4_ai_literacy",
+     "citation": "Art.4",
+     "kind": "article",
+     "ordinal": 4,
+     "title": "AI literacy",
+     "children": [
+      {
+       "key": "art4_1_ai_literacy_measures",
+       "citation": "Art.4(1)",
+       "kind": "duty",
+       "ordinal": 1,
+       "title": "Support the AI literacy of staff and others using AI systems"
+      }
+     ]
+    },
+    {
+     "key": "0001.0004",
+     "citation": "Art.4a",
+     "kind": "article",
+     "ordinal": 5,
+     "title": "Processing of special categories of personal data for bias detection and correction",
+     "children": [
+      {
+       "key": "0003.0010.0004",
+       "citation": "Art.4a(1)",
+       "kind": "duty",
+       "title": "Special categories of personal data for bias detection and correction",
+       "ordinal": 1
+      }
+     ]
     }
    ]
   },
@@ -64,22 +94,46 @@
        "ordinal": 1
       },
       {
+       "key": "art6_1a_non_safety_uses",
+       "citation": "Art.6(1a)",
+       "kind": "duty",
+       "ordinal": 2,
+       "title": "Non-safety uses are not safety components"
+      },
+      {
+       "key": "art6_1b_failure_endangers_health_safety",
+       "citation": "Art.6(1b)",
+       "kind": "duty",
+       "ordinal": 3,
+       "title": "Systems whose failure would endanger health and safety"
+      },
+      {
+       "key": "art6_1c_non_safety_third_party_assessment",
+       "citation": "Art.6(1c)",
+       "kind": "duty",
+       "ordinal": 4,
+       "title": "Third-party assessment for risks other than health and safety"
+      },
+      {
+       "key": "0003.0006.0002",
        "citation": "Art.6(2)",
        "kind": "duty",
        "title": "High-risk through Annex III",
-       "ordinal": 2
+       "ordinal": 5
       },
       {
+       "key": "0003.0006.0003",
        "citation": "Art.6(3)",
        "kind": "duty",
        "title": "Exception for Annex III systems without significant risk",
-       "ordinal": 3
+       "ordinal": 6
       },
       {
+       "key": "0003.0006.0004",
        "citation": "Art.6(4)",
        "kind": "duty",
        "title": "Documenting the exception",
-       "ordinal": 4
+       "ordinal": 7
       }
      ]
     },
@@ -499,7 +553,8 @@
       "Ch.III",
       "Ch.IV",
       "Ch.IX",
-      "Art.4a"
+      "Art.4a",
+      "Art.4"
      ]
     },
     {
@@ -529,6 +584,9 @@
      "effect": "excluded",
      "citations": [
       "Art.6(1)",
+      "Art.6(1a)",
+      "Art.6(1b)",
+      "Art.6(1c)",
       "Art.6(3)",
       "Art.6(4)",
       "Art.11(2)",
@@ -541,6 +599,9 @@
      "effect": "excluded",
      "citations": [
       "Art.6(1)",
+      "Art.6(1a)",
+      "Art.6(1b)",
+      "Art.6(1c)",
       "Art.6(2)",
       "Art.9",
       "Art.10",

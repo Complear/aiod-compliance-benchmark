@@ -1,6 +1,10 @@
+{"id": "Art.4(1)", "kind": "duty", "title": "Support the AI literacy of staff and others using AI systems", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.4a(1)", "kind": "duty", "title": "Special categories of personal data for bias detection and correction", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.5(1)", "kind": "duty", "title": "Practices that may not be placed on the market or used", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.6(1)", "kind": "duty", "title": "High-risk through Union harmonisation legislation", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(1a)", "kind": "duty", "title": "Non-safety uses are not safety components", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(1b)", "kind": "duty", "title": "Systems whose failure would endanger health and safety", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
+{"id": "Art.6(1c)", "kind": "duty", "title": "Third-party assessment for risks other than health and safety", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.6(2)", "kind": "duty", "title": "High-risk through Annex III", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.6(3)", "kind": "duty", "title": "Exception for Annex III systems without significant risk", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
 {"id": "Art.6(4)", "kind": "duty", "title": "Documenting the exception", "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"}
