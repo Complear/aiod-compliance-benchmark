@@ -7,6 +7,12 @@ scoping questions of the EU AI Act framework pack; the pack's rules then decide 
 `mdr_class` also carries IVDR devices, mapped by notified-body involvement: A to I, B to IIa, C to IIb,
 D to III. ponytail: MDR class I devices that need a notified body (sterile, measuring, reusable surgical)
 are not modelled.
+
+`safety_component` is optional and defaults to true, so facts written before Regulation (EU) 2026/1744
+keep their tier. Set it to false for AI in a device that is used solely for non-safety aspects (user
+assistance, performance optimisation, service efficiency, automation, convenience, quality control) and
+whose failure would not endanger health or safety: it is then not high-risk under Art. 6(1)
+(Art. 6(1a), 6(1b)).
 """
 
 from cdb import pack
@@ -28,6 +34,9 @@ FACTS = {
     "emotion_or_biometric_categorisation": bool,
 }
 
+# Optional facts and their defaults.
+OPTIONAL = {"safety_component": True}
+
 # Severity order used for the under-classification metric.
 SEVERITY = {
     "out_of_scope": 0, "minimal": 1, "limited": 2,
@@ -44,7 +53,8 @@ _CATEGORY = {
 def validate(facts):
     """Return a list of problems with a facts dict; empty when valid."""
     problems = [f"missing {k}" for k in FACTS if k not in facts]
-    problems += [f"unknown {k}" for k in facts if k not in FACTS]
+    problems += [f"unknown {k}" for k in facts if k not in FACTS and k not in OPTIONAL]
+    problems += [f"bad value {k}={facts[k]!r}" for k in OPTIONAL if k in facts and not isinstance(facts[k], bool)]
     for key, allowed in FACTS.items():
         if key not in facts:
             continue
@@ -64,7 +74,7 @@ def tier(f):
         return "out_of_scope"
     if f["prohibited_practice"]:
         return "prohibited"
-    if f["mdr_class"] in ("IIa", "IIb", "III"):
+    if f["mdr_class"] in ("IIa", "IIb", "III") and f.get("safety_component", OPTIONAL["safety_component"]):
         return "high_risk_6_1"
     if f["annex_iii_area"] != "none" and not _excepted(f):
         return "high_risk_6_2"
