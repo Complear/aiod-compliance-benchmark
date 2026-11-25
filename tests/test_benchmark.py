@@ -24,6 +24,12 @@ class EngineTest(unittest.TestCase):
         self.assertEqual(engine.tier(facts(mdr_class="I")), "minimal")
         self.assertEqual(engine.tier(facts(mdr_class="I", interacts_with_persons=True)), "limited")
 
+    def test_non_safety_ai_in_a_device_is_not_high_risk(self):
+        self.assertEqual(engine.tier(facts(mdr_class="IIb", safety_component=False)), "minimal")
+        self.assertEqual(engine.tier(facts(mdr_class="IIb", safety_component=True)), "high_risk_6_1")
+        self.assertEqual(engine.validate(facts(mdr_class="IIb", safety_component=False)), [])
+        self.assertEqual(engine.validate(facts(safety_component="no")), ["bad value safety_component='no'"])
+
     def test_art6_3_exception_is_cancelled_by_profiling(self):
         excepted = facts(annex_iii_area="essential_services", art6_3_exception=True)
         self.assertEqual(engine.tier(excepted), "minimal")
